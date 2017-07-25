@@ -6,4 +6,8 @@
     android:layout_height="match_parent"
     tools:context="io.github.dearzack.hencoder.activity.HenCoderActivity1_1">
 
+    <io.github.dearzack.hencoder.view.HenCoder1_1View
+        android:layout_width="300dp"
+        android:layout_height="300dp" />
+
 </android.support.constraint.ConstraintLayout>
