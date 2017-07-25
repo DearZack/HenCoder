@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.github.dearzack.hencoder.activity.HenCoderActivity1_1;
 import io.github.dearzack.hencoder.adapter.MainAdapter;
 
 public class MainActivity extends AppCompatActivity {
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = null;
         switch (position) {
             case 0:
-
+                intent = new Intent(this, HenCoderActivity1_1.class);
                 break;
         }
         if (intent != null) {
