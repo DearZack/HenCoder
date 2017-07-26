@@ -11,6 +11,7 @@ import java.util.List;
 
 import io.github.dearzack.hencoder.activity.HenCoderActivity1_1;
 import io.github.dearzack.hencoder.activity.HenCoderActivity1_2;
+import io.github.dearzack.hencoder.activity.HenCoderActivity1_3;
 import io.github.dearzack.hencoder.adapter.MainAdapter;
 
 public class MainActivity extends AppCompatActivity {
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         data = new ArrayList<>();
         data.add("绘制基础");
         data.add("Paint 详解");
+        data.add("文字的绘制");
     }
 
     private void gotoNewActivity(int position) {
@@ -48,6 +50,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 1:
                 intent = new Intent(this, HenCoderActivity1_2.class);
+                break;
+            case 2:
+                intent = new Intent(this, HenCoderActivity1_3.class);
                 break;
         }
         if (intent != null) {
