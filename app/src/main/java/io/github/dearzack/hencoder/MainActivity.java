@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import io.github.dearzack.hencoder.activity.HenCoderActivity1_1;
+import io.github.dearzack.hencoder.activity.HenCoderActivity1_2;
 import io.github.dearzack.hencoder.adapter.MainAdapter;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private void initData() {
         data = new ArrayList<>();
         data.add("绘制基础");
+        data.add("Paint 详解");
     }
 
     private void gotoNewActivity(int position) {
@@ -43,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
         switch (position) {
             case 0:
                 intent = new Intent(this, HenCoderActivity1_1.class);
+                break;
+            case 1:
+                intent = new Intent(this, HenCoderActivity1_2.class);
                 break;
         }
         if (intent != null) {
