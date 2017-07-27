@@ -69,6 +69,6 @@ public class HenCoder1_3View extends View {
         canvas.drawTextOnPath("Hello HenCoder", path1, 0, 0, paint1);
         canvas.translate(0, 400);
         staticLayout.draw(canvas);
-        canvas.drawText("一条删除线", 10, 350, paint2);
+        canvas.drawText("一条删除线哟", 10, 350, paint2);
     }
 }
