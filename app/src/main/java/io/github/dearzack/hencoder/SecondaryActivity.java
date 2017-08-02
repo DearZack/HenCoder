@@ -46,6 +46,7 @@ public class SecondaryActivity extends AppCompatActivity {
 
     private void initData() {
         data = new ArrayList<>();
+        data.add("HTTPS");
     }
 
     private void gotoNewActivity(int position) {
