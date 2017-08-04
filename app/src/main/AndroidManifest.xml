@@ -21,7 +21,9 @@
         <activity android:name=".activity.HenCoderActivity1_2" />
         <activity android:name=".activity.HenCoderActivity1_3" />
         <activity android:name=".SecondaryActivity" />
-        <activity android:name=".activity.HTTPSActivity"></activity>
+        <activity android:name=".activity.HTTPSActivity" />
+        <activity android:name=".activity.HenCoderActivity1_4" />
+        <activity android:name=".activity.HenCoderActivity1_5"></activity>
     </application>
 
 </manifest>
