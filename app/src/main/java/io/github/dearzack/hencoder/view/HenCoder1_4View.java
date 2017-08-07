@@ -3,6 +3,7 @@ package io.github.dearzack.hencoder.view;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Camera;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.Paint;
@@ -24,6 +25,7 @@ public class HenCoder1_4View extends View {
     private Bitmap bitmap1;
     private Matrix matrix1;
     private float[] pointsSrc, pointsDst;
+    private Camera camera;
 
     public HenCoder1_4View(Context context) {
         super(context);
@@ -46,6 +48,7 @@ public class HenCoder1_4View extends View {
         path1 = new Path();
         bitmap1 = BitmapFactory.decodeResource(getResources(), R.drawable.maps);
         matrix1 = new Matrix();
+        camera = new Camera();
         float left = 0, top = 0, right = bitmap1.getWidth(), bottom = bitmap1.getHeight();
         pointsSrc = new float[]{left, top, right, top, left, bottom, right, bottom};
         pointsDst = new float[]{left - 10, top + 50, right + 120, top - 90, left + 20, bottom + 30, right + 20, bottom + 60};
@@ -72,8 +75,15 @@ public class HenCoder1_4View extends View {
         //Canvas.concat(matrix)：用 Canvas 当前的变换矩阵和 Matrix 相乘，即基于 Canvas 当前的变换，叠加上 Matrix 中的变换。
 
 
-        matrix1.setPolyToPoly(pointsSrc, 0, pointsDst, 0, 4);
-        canvas.setMatrix(matrix1);
+//        matrix1.setPolyToPoly(pointsSrc, 0, pointsDst, 0, 4);
+//        canvas.setMatrix(matrix1);
+        canvas.save();
+        camera.save();
+        camera.rotateX(30); // 旋转 Camera 的三维空间
+        canvas.translate(bitmap1.getWidth() / 2, bitmap1.getHeight() / 2);
+        camera.applyToCanvas(canvas); // 把旋转投影到 Canvas
+        canvas.translate(-bitmap1.getWidth() / 2, -bitmap1.getHeight() / 2);
         canvas.drawBitmap(bitmap1, 0, 0, paint1);
+        canvas.restore();
     }
 }
