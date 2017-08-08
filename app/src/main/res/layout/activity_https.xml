@@ -5,4 +5,9 @@
     android:layout_height="match_parent"
     tools:context="io.github.dearzack.hencoder.activity.HTTPSActivity">
 
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 </RelativeLayout>

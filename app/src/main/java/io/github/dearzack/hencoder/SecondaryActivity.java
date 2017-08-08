@@ -11,6 +11,7 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.github.dearzack.hencoder.activity.HTTPSActivity;
 import io.github.dearzack.hencoder.adapter.MainAdapter;
 
 public class SecondaryActivity extends AppCompatActivity {
@@ -52,6 +53,9 @@ public class SecondaryActivity extends AppCompatActivity {
     private void gotoNewActivity(int position) {
         Intent intent = null;
         switch (position) {
+            case 0:
+                intent = new Intent(this, HTTPSActivity.class);
+                break;
         }
         if (intent != null) {
             startActivity(intent);
