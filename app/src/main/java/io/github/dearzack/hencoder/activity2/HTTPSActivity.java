@@ -1,4 +1,4 @@
-package io.github.dearzack.hencoder.activity;
+package io.github.dearzack.hencoder.activity2;
 
 import android.content.Context;
 import android.os.Bundle;

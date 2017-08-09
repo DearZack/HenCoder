@@ -11,7 +11,7 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.github.dearzack.hencoder.activity.HTTPSActivity;
+import io.github.dearzack.hencoder.activity2.HTTPSActivity;
 import io.github.dearzack.hencoder.adapter.MainAdapter;
 
 public class SecondaryActivity extends AppCompatActivity {
