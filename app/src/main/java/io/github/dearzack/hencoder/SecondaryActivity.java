@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import io.github.dearzack.hencoder.activity2.HTTPSActivity;
+import io.github.dearzack.hencoder.activity2.NormalActivity;
 import io.github.dearzack.hencoder.adapter.MainAdapter;
 
 public class SecondaryActivity extends AppCompatActivity {
@@ -48,6 +49,7 @@ public class SecondaryActivity extends AppCompatActivity {
     private void initData() {
         data = new ArrayList<>();
         data.add("HTTPS");
+        data.add("normalTest");
     }
 
     private void gotoNewActivity(int position) {
@@ -55,6 +57,9 @@ public class SecondaryActivity extends AppCompatActivity {
         switch (position) {
             case 0:
                 intent = new Intent(this, HTTPSActivity.class);
+                break;
+            case 1:
+                intent = new Intent(this, NormalActivity.class);
                 break;
         }
         if (intent != null) {
