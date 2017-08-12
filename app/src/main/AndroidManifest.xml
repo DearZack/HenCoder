@@ -26,7 +26,8 @@
         <activity android:name=".activity2.HTTPSActivity" />
         <activity android:name=".activity.HenCoderActivity1_4" />
         <activity android:name=".activity.HenCoderActivity1_5" />
-        <activity android:name=".activity2.NormalActivity"></activity>
+        <activity android:name=".activity2.NormalActivity" />
+        <activity android:name=".activity2.LoadingWaveActivity"></activity>
     </application>
 
 </manifest>
