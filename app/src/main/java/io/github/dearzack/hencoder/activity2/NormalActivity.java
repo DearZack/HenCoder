@@ -65,9 +65,9 @@ public class NormalActivity extends AppCompatActivity {
         //如果没有打印出"OVER",说明产生了死锁
     }
 
-    class DeadLockThread extends Thread {
-        private LockBean lockBean1;
-        private LockBean lockBean2;
+    private class DeadLockThread extends Thread {
+        private final LockBean lockBean1;
+        private final LockBean lockBean2;
 
         public DeadLockThread(LockBean lockBean1, LockBean lockBean2) {
             this.lockBean1 = lockBean1;

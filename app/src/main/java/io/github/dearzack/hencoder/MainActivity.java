@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         data.add("Paint 详解");
         data.add("文字的绘制");
         data.add("Canvas 对绘制的辅助");
-        data.add("1-5");
+        data.add("绘制顺序");
     }
 
     private void gotoNewActivity(int position) {

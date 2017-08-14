@@ -3,6 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="io.github.dearzack.hencoder.activity.HenCoderActivity1_5">
+
+    <io.github.dearzack.hencoder.view.HenCoder1_5View
+        android:layout_width="200dp"
+        android:layout_height="200dp" />
+
+    <io.github.dearzack.hencoder.view2.HenImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/batman" />
+
 
 </LinearLayout>
