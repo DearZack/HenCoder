@@ -1,6 +1,7 @@
 package io.github.dearzack.hencoder.activity2;
 
 import android.os.Bundle;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
@@ -63,6 +64,16 @@ public class NormalActivity extends AppCompatActivity {
         deadLockThread2.start();
 
         //如果没有打印出"OVER",说明产生了死锁
+    }
+
+    /**
+     *  优先用obtain而不是new对象出来
+     *  用到了享元模式，Message内部维护了一个pool（链表形式）
+     *  如果有缓存会先去取，如果没有缓存会去new
+     *  享元模式可以大大减少应用程序创建的对象，减低程序内存的占用
+     */
+    private void messageTest() {
+        Message message = Message.obtain();
     }
 
     private class DeadLockThread extends Thread {
