@@ -10,6 +10,8 @@ import android.view.View;
 
 /**
  * Created by Zack on 2017/8/4.
+ * 1.在 ViewGroup 的子类中重写除 dispatchDraw() 以外的绘制方法时，可能需要调用  setWillNotDraw(false)；
+ * 2.在重写的方法有多个选择时，优先选择 onDraw()。
  */
 
 public class HenCoder1_5View extends View {

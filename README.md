@@ -7,3 +7,4 @@
 2. [HenCoder Android 开发进阶: 自定义 View 1-2 Paint 详解](http://hencoder.com/ui-1-2/)
 3. [HenCoder Android 开发进阶：自定义 View 1-3 文字的绘制](http://hencoder.com/ui-1-3/)
 4. [HenCoder Android 开发进阶：自定义 View 1-4 Canvas 对绘制的辅助](http://hencoder.com/ui-1-4/)
+5. [HenCoder Android 开发进阶：自定义 View 1-5 绘制顺序](http://hencoder.com/ui-1-5/)
