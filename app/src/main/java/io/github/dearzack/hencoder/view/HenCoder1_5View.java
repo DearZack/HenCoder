@@ -12,6 +12,16 @@ import android.view.View;
  * Created by Zack on 2017/8/4.
  * 1.在 ViewGroup 的子类中重写除 dispatchDraw() 以外的绘制方法时，可能需要调用  setWillNotDraw(false)；
  * 2.在重写的方法有多个选择时，优先选择 onDraw()。
+ *
+ * 绘制流程
+ * 1.drawBackground()  不能被重写
+ * 2.onDraw()
+ * 3.dispatchDraw()   一般是viewGroup会有这一步
+ * 4.onDrawForeground()
+ *
+ *
+ * 1、2、3、4这四部都是在draw（）函数里被调用的，顺序永远不会被改变
+ * 逻辑写在不同的地方会有不同的效果
  */
 
 public class HenCoder1_5View extends View {
