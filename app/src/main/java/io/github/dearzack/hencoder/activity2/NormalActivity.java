@@ -21,6 +21,25 @@ public class NormalActivity extends AppCompatActivity {
     }
 
     /**
+     * 备忘录模式
+     * 依次存储当前窗口的视图、Fragment、ActivityLifecycleCallbacks
+     *
+     * 需要注意的是没有ID的view的状态是不会被保存的，
+     * 保存状态有一个map，key就是这个view的id，如果没有id会被跳过
+     * @param outState
+     */
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+    }
+
+    /**
      * @see ThreadLocal 学习使用这个类
      * 不同的线程set的值都会有单独的副本
      * 参考资料 http://blog.csdn.net/singwhatiwanna/article/details/48350919
