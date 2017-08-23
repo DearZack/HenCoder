@@ -5,6 +5,7 @@ import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+import io.github.dearzack.hencoder.BuildConfig;
 import io.github.dearzack.hencoder.R;
 import io.github.dearzack.hencoder.bean.LockBean;
 
@@ -17,15 +18,20 @@ public class NormalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_normal);
 //        threadLocalTest();
-        deadLockTest();
+//        deadLockTest();
+        //gradle高级配置 相关文章
+        //https://mp.weixin.qq.com/s?__biz=MzAxMTI4MTkwNQ==&mid=2650823843&idx=1&sn=b37cdf30f2e1938b0ac88cf4fc1eb331&chksm=80b7883db7c0012bfd66cefc3669f25d3ebda8b840b592d7c7d439d0e730061735ecdebf0de6&mpshare=1&scene=1&srcid=0823tCkOaYqaBNfzQh7PNrsL#rd
+        //http://git.oschina.net/janus77/advancedgradledemo
+        Log.e(TAG, BuildConfig.val);
     }
 
     /**
      * 备忘录模式
      * 依次存储当前窗口的视图、Fragment、ActivityLifecycleCallbacks
-     *
+     * <p>
      * 需要注意的是没有ID的view的状态是不会被保存的，
      * 保存状态有一个map，key就是这个view的id，如果没有id会被跳过
+     *
      * @param outState
      */
     @Override
@@ -66,12 +72,11 @@ public class NormalActivity extends AppCompatActivity {
     }
 
     /**
-     *
-      产生死锁的四个必要条件：
-     （1） 互斥条件：一个资源每次只能被一个进程使用。
-     （2） 请求与保持条件：一个进程因请求资源而阻塞时，对已获得的资源保持不放。
-     （3） 不剥夺条件:进程已获得的资源，在末使用完之前，不能强行剥夺。
-     （4） 循环等待条件:若干进程之间形成一种头尾相接的循环等待资源关系。
+     * 产生死锁的四个必要条件：
+     * （1） 互斥条件：一个资源每次只能被一个进程使用。
+     * （2） 请求与保持条件：一个进程因请求资源而阻塞时，对已获得的资源保持不放。
+     * （3） 不剥夺条件:进程已获得的资源，在末使用完之前，不能强行剥夺。
+     * （4） 循环等待条件:若干进程之间形成一种头尾相接的循环等待资源关系。
      */
     private void deadLockTest() {
         LockBean lockBean1 = new LockBean("A");
@@ -86,10 +91,10 @@ public class NormalActivity extends AppCompatActivity {
     }
 
     /**
-     *  优先用obtain而不是new对象出来
-     *  用到了享元模式，Message内部维护了一个pool（链表形式）
-     *  如果有缓存会先去取，如果没有缓存会去new
-     *  享元模式可以大大减少应用程序创建的对象，减低程序内存的占用
+     * 优先用obtain而不是new对象出来
+     * 用到了享元模式，Message内部维护了一个pool（链表形式）
+     * 如果有缓存会先去取，如果没有缓存会去new
+     * 享元模式可以大大减少应用程序创建的对象，减低程序内存的占用
      */
     private void messageTest() {
         Message message = Message.obtain();
