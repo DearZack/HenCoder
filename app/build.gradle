@@ -18,10 +18,19 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField 'String', 'val', '"release自定义的属性"'
         }
         qa {
             buildConfigField 'String', 'val', '"QA的自定义的属性"'
         }
+    }
+
+    productFlavors {
+        kuan {}
+        xiaomi {}
+        qh360 {}
+        baidu {}
+        wandoujia {}
     }
 }
 

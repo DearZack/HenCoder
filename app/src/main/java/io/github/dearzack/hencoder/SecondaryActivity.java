@@ -13,6 +13,7 @@ import java.util.List;
 
 import io.github.dearzack.hencoder.activity2.HTTPSActivity;
 import io.github.dearzack.hencoder.activity2.LoadingWaveActivity;
+import io.github.dearzack.hencoder.activity2.MiuiWeatherActivity;
 import io.github.dearzack.hencoder.activity2.NormalActivity;
 import io.github.dearzack.hencoder.adapter.MainAdapter;
 
@@ -52,6 +53,7 @@ public class SecondaryActivity extends AppCompatActivity {
         data.add("HTTPS");
         data.add("normalTest");
         data.add("Wave");
+        data.add("MiuiWeather");
     }
 
     private void gotoNewActivity(int position) {
@@ -65,6 +67,9 @@ public class SecondaryActivity extends AppCompatActivity {
                 break;
             case 2:
                 intent = new Intent(this, LoadingWaveActivity.class);
+                break;
+            case 3:
+                intent = new Intent(this, MiuiWeatherActivity.class);
                 break;
         }
         if (intent != null) {

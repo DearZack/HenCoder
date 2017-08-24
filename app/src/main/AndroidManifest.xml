@@ -27,7 +27,8 @@
         <activity android:name=".activity.HenCoderActivity1_4" />
         <activity android:name=".activity.HenCoderActivity1_5" />
         <activity android:name=".activity2.NormalActivity" />
-        <activity android:name=".activity2.LoadingWaveActivity"></activity>
+        <activity android:name=".activity2.LoadingWaveActivity" />
+        <activity android:name=".activity2.MiuiWeatherActivity"></activity>
     </application>
 
 </manifest>
