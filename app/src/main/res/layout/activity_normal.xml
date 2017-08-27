@@ -6,4 +6,9 @@
     android:layout_height="match_parent"
     tools:context="io.github.dearzack.hencoder.activity2.NormalActivity">
 
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
 </android.support.constraint.ConstraintLayout>

@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.ViewTreeObserver;
+import android.widget.ImageView;
 
 import io.github.dearzack.hencoder.BuildConfig;
 import io.github.dearzack.hencoder.R;
@@ -12,6 +14,8 @@ import io.github.dearzack.hencoder.bean.LockBean;
 public class NormalActivity extends AppCompatActivity {
 
     private static final String TAG = "NormalActivity";
+
+    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +27,25 @@ public class NormalActivity extends AppCompatActivity {
         //https://mp.weixin.qq.com/s?__biz=MzAxMTI4MTkwNQ==&mid=2650823843&idx=1&sn=b37cdf30f2e1938b0ac88cf4fc1eb331&chksm=80b7883db7c0012bfd66cefc3669f25d3ebda8b840b592d7c7d439d0e730061735ecdebf0de6&mpshare=1&scene=1&srcid=0823tCkOaYqaBNfzQh7PNrsL#rd
         //http://git.oschina.net/janus77/advancedgradledemo
         Log.e(TAG, BuildConfig.val);
+        imageView = (ImageView) findViewById(R.id.image);
+        imageView.setImageResource(R.drawable.maps);
+        Log.e(TAG, "imageView.getHeight()"+imageView.getHeight() +"mageView.getWidth()" +imageView.getWidth());
+
+    }
+
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        Log.e(TAG, "imageView.getHeight()"+imageView.getHeight() +"mageView.getWidth()" +imageView.getWidth());
+//        imageView.setImageBitmap(BitmapUtils.decodeSampledBitmapFromResource(getResources(),
+//                R.drawable.maps, imageView.getWidth(), imageView.getHeight()));
+        imageView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+
+            }
+        });
     }
 
     /**
