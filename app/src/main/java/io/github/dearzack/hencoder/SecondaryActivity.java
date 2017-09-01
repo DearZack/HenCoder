@@ -15,6 +15,7 @@ import io.github.dearzack.hencoder.activity2.HTTPSActivity;
 import io.github.dearzack.hencoder.activity2.LoadingWaveActivity;
 import io.github.dearzack.hencoder.activity2.MiuiWeatherActivity;
 import io.github.dearzack.hencoder.activity2.NormalActivity;
+import io.github.dearzack.hencoder.activity2.PictureExifActivity;
 import io.github.dearzack.hencoder.adapter.MainAdapter;
 
 public class SecondaryActivity extends AppCompatActivity {
@@ -54,6 +55,7 @@ public class SecondaryActivity extends AppCompatActivity {
         data.add("normalTest");
         data.add("Wave");
         data.add("MiuiWeather");
+        data.add("PicExif");
     }
 
     private void gotoNewActivity(int position) {
@@ -70,6 +72,9 @@ public class SecondaryActivity extends AppCompatActivity {
                 break;
             case 3:
                 intent = new Intent(this, MiuiWeatherActivity.class);
+                break;
+            case 4:
+                intent = new Intent(this, PictureExifActivity.class);
                 break;
         }
         if (intent != null) {

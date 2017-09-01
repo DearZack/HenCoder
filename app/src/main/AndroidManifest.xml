@@ -3,6 +3,8 @@
     package="io.github.dearzack.hencoder">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -28,7 +30,8 @@
         <activity android:name=".activity.HenCoderActivity1_5" />
         <activity android:name=".activity2.NormalActivity" />
         <activity android:name=".activity2.LoadingWaveActivity" />
-        <activity android:name=".activity2.MiuiWeatherActivity"></activity>
+        <activity android:name=".activity2.MiuiWeatherActivity" />
+        <activity android:name=".activity2.PictureExifActivity"></activity>
     </application>
 
 </manifest>
